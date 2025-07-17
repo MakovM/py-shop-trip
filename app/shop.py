@@ -14,10 +14,9 @@ class Shops:
         date_today = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         total_cost = 0
 
-        print(
-            f"Date: {date_today}\n"
-            f"Thanks, {customer.name}, for your purchase!\n"
-            f"You have bought: ")
+        print(f"Date: {date_today}")
+        print(f"Thanks, {customer.name}, for your purchase!")
+        print("You have bought:")
 
         for key, value in customer.product_cart.items():
             product_cost = value * self.products[key]
