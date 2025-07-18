@@ -1,16 +1,14 @@
 from dataclasses import dataclass
 import datetime
 
-from app.customer import Customers
-
 
 @dataclass
-class Shops:
+class Shop:
     name: str
     location: list
     products: dict
 
-    def get_bill(self, customer: Customers) -> None:
+    def get_bill(self, customer: list) -> None:
         date_today = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         total_cost = 0
 
